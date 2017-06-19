@@ -9,13 +9,13 @@ We are given a linux x64 binary, that reads 4 bytes in a loop, each time allocat
 putting there a template function, and filling our 4 bytes in the middle of it.
 The template function looks like this:
 
-![alt text](http://puu.sh/wokSo/88e0dc728c.png)
+![alt text](./template.png)
 
 And the nops are replaced with our 4 bytes.
 So it actually runs our 4 bytes in a loop, 0x1000 times. next we can see that our shellcode is timed,
 and the result is sent back to us:
 
-![alt text](http://puu.sh/wokWD/890b9db882.png)
+![alt text](./timing.png)
 
 This challange was difficut because of the size limit, and the loop.
 Most of our attempts were to minimize size of shellcodes, and interrupting the loop somehow.
